@@ -1,7 +1,7 @@
-function ExpenseItem()
+function ExpenseItems()
 {
     return <h2>Expense Item!</h2>
 }
 
 
-export default ExpenseItem;
+export default ExpenseItems;
