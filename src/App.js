@@ -1,54 +1,61 @@
-import ExpenseItem from "./Components/ExpenseItem";
-
+// import ExpenseItem from "./Components/ExpenseItem";
+import Expenses from "./Components/Expense/Expenses";
 function App() {
   const expense = [
     {
       title: "Food",
-      LocationOfExpenditure: "Indore",
-      Amount: 500,
+      location: "Indore",
+      amount: 500,
+      date : new Date(2023,5,10),
     },
 
     {
       title: "Travel",
-      LocationOfExpenditure: "Mumbai",
-      Amount: 650,
+      location: "Mumbai",
+      amount: 650,
+      date : new Date(2023,8,2),
     },
     {
       title: "Movie",
-      LocationOfExpenditure: "Bhopal",
-      Amount: 800,
+     location: "Bhopal",
+      amount: 800,
+      date : new Date(2022,8,27),
     },
     {
       title: "Shopping",
-      LocationOfExpenditure: "Bangluru",
-      Amount: 5600,
+      location: "Bangluru",
+      amount: 5600,
+      date : new Date(2024,9,17),
     },
     {
       title: "Party Venue",
-      LocationOfExpenditure: "Delhi",
-      Amount: 8800,
+      location: "Delhi",
+      amount: 8800,
+      date : new Date(2023,6,27),
     },
   ];
 
 
 
-  const expenseItems = []; // Create an empty array to hold the ExpenseItem components
+  // const expenseItems = []; // Create an empty array to hold the ExpenseItem components
 
-  expense.forEach((expense) => {
-    expenseItems.push(
-      <ExpenseItem
-        title={expense.title}
-        location={expense.LocationOfExpenditure}
-        amount={expense.Amount}
-      ></ExpenseItem>
-    );
-  });
+  // expense.forEach((expense) => {
+  //   expenseItems.push(
+  //     <ExpenseItem
+  //       title={expense.title}
+  //       location={expense.LocationOfExpenditure}
+  //       amount={expense.Amount}
+  //       date={expense.date}
+  //     ></ExpenseItem>
+  //   );
+  // });
   return (
     <div>
       <div>
         <h2>Let's get started!</h2>
+        <h2>Expense Item</h2>
       </div>
-       {expenseItems}
+        <Expenses item = {expense}/>
       {/* <ExpenseItem
         title={expense[1].title}
         location={expense[1].LocationOfExpenditure}
