@@ -1,8 +1,17 @@
+import React from "react";
+
 // import ExpenseItem from "./Components/ExpenseItem";
+
+import NewExpense from "./Components/NewExpense/NewExpense";
+
 import Expenses from "./Components/Expense/Expenses";
+
+
+
 function App() {
   const expense = [
     {
+      id : "e1",
       title: "Food",
       location: "Indore",
       amount: 500,
@@ -10,24 +19,28 @@ function App() {
     },
 
     {
+      id : "e2",
       title: "Travel",
       location: "Mumbai",
       amount: 650,
       date : new Date(2023,8,2),
     },
     {
+      id : "e3",
       title: "Movie",
      location: "Bhopal",
       amount: 800,
       date : new Date(2022,8,27),
     },
     {
+      id : "e4",
       title: "Shopping",
       location: "Bangluru",
       amount: 5600,
       date : new Date(2024,9,17),
     },
     {
+      id : "e5",
       title: "Party Venue",
       location: "Delhi",
       amount: 8800,
@@ -51,11 +64,13 @@ function App() {
   // });
   return (
     <div>
-      <div>
-        <h2>Let's get started!</h2>
-        <h2>Expense Item</h2>
-      </div>
+     
+
+        <NewExpense />
         <Expenses item = {expense}/>
+
+    
+       
       {/* <ExpenseItem
         title={expense[1].title}
         location={expense[1].LocationOfExpenditure}
