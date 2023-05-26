@@ -13,7 +13,7 @@ function App() {
     {
       id : "e1",
       title: "Food",
-      location: "Indore",
+     // location: "Indore",
       amount: 500,
       date : new Date(2023,5,10),
     },
@@ -21,34 +21,34 @@ function App() {
     {
       id : "e2",
       title: "Travel",
-      location: "Mumbai",
+     // location: "Mumbai",
       amount: 650,
       date : new Date(2023,8,2),
     },
     {
       id : "e3",
       title: "Movie",
-     location: "Bhopal",
+     // location: "Bhopal",
       amount: 800,
       date : new Date(2022,8,27),
     },
     {
       id : "e4",
       title: "Shopping",
-      location: "Bangluru",
+      //location: "Bangluru",
       amount: 5600,
       date : new Date(2024,9,17),
     },
     {
       id : "e5",
       title: "Party Venue",
-      location: "Delhi",
+     // location: "Delhi",
       amount: 8800,
       date : new Date(2023,6,27),
     },
   ];
 
-  const [expenseList , setExpenseList] = useState(expense);
+  const [expenseList, setExpenseList] = useState(expense);
 
   const addExpenseHandler = (newexpense) => {
     const addingNewExpense = [...expenseList,{...newexpense}]; 

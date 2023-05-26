@@ -37,7 +37,7 @@ const ExpenseItem = (props) => {
 
   <ExpenseDate date ={props.date} />
   
-  <ExpenseDetails amount={amount}  location={props.location}   title={props.title} />
+  <ExpenseDetails amount={amount}   title={props.title} />
   <button onClick = {AddExpense} > Add $100</button>
   {/* <button  onClick={deleteHandler} > Delete Expense </button> */}
   </Card>

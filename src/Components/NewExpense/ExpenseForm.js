@@ -6,7 +6,8 @@ const ExpenseForm = (props) => {
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredtitle, setEnteredTitle] = useState("");
   const [entereddate, setEnteredDate] = useState("");
-  const [enteredlocation, setEnteredLocation] = useState("");
+
+  // const [enteredlocation, setEnteredLocation] = useState("");
 
   // const [userInput , setUserInput] = useState({
   //   enteredAmount : '',
@@ -17,7 +18,7 @@ const ExpenseForm = (props) => {
   // });
 
   const amountChangeHandler = (event) => {
-    setEnteredAmount(event.target.value);
+    setEnteredAmount(parseInt(event.target.value));
     //  setUserInput ({
     //   ...userInput,
     //   enteredAmount : event.target.value ,
@@ -43,12 +44,12 @@ const ExpenseForm = (props) => {
     //   });
   };
 
-  const locationChangeHandler = (event) => {
-    setEnteredLocation(event.target.value);
-    // setUserInput((prevState) => {
-    //   return {...prevState ,  enteredlocation : event.target.value , }
-    //   });
-  };
+  // const locationChangeHandler = (event) => {
+  //   setEnteredLocation(event.target.value);
+  //   // setUserInput((prevState) => {
+  //   //   return {...prevState ,  enteredlocation : event.target.value , }
+  //   //   });
+  // };
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -60,7 +61,7 @@ const ExpenseForm = (props) => {
 
       id: Math.random().toString(),
       title: enteredtitle,
-      location: enteredlocation,
+      
       amount: enteredAmount,
       date: new Date(entereddate),
     };
@@ -69,7 +70,6 @@ const ExpenseForm = (props) => {
 
     props.onSaveExpenseData(expensedata);
     setEnteredAmount("");
-    setEnteredLocation("");
     setEnteredDate("");
     setEnteredTitle("");
   };
@@ -102,14 +102,6 @@ const ExpenseForm = (props) => {
             max="2024-10-10"
             value={entereddate}
             onChange={dateChangeHandler}
-          />
-        </div>
-        <div className="new-expense__control">
-          <label>location</label>
-          <input
-            type="text"
-            value={enteredlocation}
-            onChange={locationChangeHandler}
           />
         </div>
       </div>
