@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 // import ExpenseItem from "./Components/ExpenseItem";
 
@@ -48,40 +48,21 @@ function App() {
     },
   ];
 
+  const [expenseList , setExpenseList] = useState(expense);
 
-
-  // const expenseItems = []; // Create an empty array to hold the ExpenseItem components
-
-  // expense.forEach((expense) => {
-  //   expenseItems.push(
-  //     <ExpenseItem
-  //       title={expense.title}
-  //       location={expense.LocationOfExpenditure}
-  //       amount={expense.Amount}
-  //       date={expense.date}
-  //     ></ExpenseItem>
-  //   );
-  // });
+  const addExpenseHandler = (newexpense) => {
+    const addingNewExpense = [...expenseList,{...newexpense}]; 
+    
+     setExpenseList(addingNewExpense);
+    
+  }
   return (
     <div>
-     
-
-        <NewExpense />
-        <Expenses item = {expense}/>
-
-    
+        <NewExpense  onAddExpense={addExpenseHandler}/>
+        <Expenses item ={expenseList}/>
+   </div>
        
-      {/* <ExpenseItem
-        title={expense[1].title}
-        location={expense[1].LocationOfExpenditure}
-        amount={expense[1].Amount}
-      ></ExpenseItem>
-      <ExpenseItem
-        title={expense[2].title}
-        location={expense[2].LocationOfExpenditure}
-        amount={expense[2].Amount}
-      ></ExpenseItem> */}
-    </div>
+     
   );
 }
 
