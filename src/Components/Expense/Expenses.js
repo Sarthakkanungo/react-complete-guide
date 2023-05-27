@@ -4,6 +4,7 @@ import ExpenseItem from "./ExpenseItem";
 import Card from "../UI/Card";
 import "./Expenses.css";
 import ExpenseFilter from "./ExpenseFilter";
+import ExpenseChart from "./ExpenseChart";
 
 const Expenses = (props) => {
   console.log(props.item, "IN Expenses");
@@ -53,6 +54,8 @@ const Expenses = (props) => {
       />
 
 
+
+       <ExpenseChart expenses={filteredExpenses} />
         {/* {expensesContent}; */}
 
 
