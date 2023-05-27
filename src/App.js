@@ -20,7 +20,7 @@ const expense = [
     title: "Travel",
    // location: "Mumbai",
     amount: 650,
-    date : new Date(2023,8,2),
+    date : new Date(2019,8,2),
   },
   {
     id : "e3",
@@ -34,7 +34,7 @@ const expense = [
     title: "Shopping",
     //location: "Bangluru",
     amount: 5600,
-    date : new Date(2024,9,17),
+    date : new Date(2022,9,17),
   },
   {
     id : "e5",
